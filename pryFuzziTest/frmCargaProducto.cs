@@ -24,7 +24,14 @@ namespace pryFuzziTest
 
         private void btnNext1_Click(object sender, EventArgs e)
         {
-
+            if(cbxProdList.SelectedItem != null)
+            {
+                gbxLoadProd2.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Completar los datos", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -41,7 +48,15 @@ namespace pryFuzziTest
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
+            if (txtName.Text != "")
+            {
+                cbxProdList.Enabled = true;
+                MessageBox.Show("Acceso Autorizado.", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Completar los datos", "Error al acceder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void lblName_Click(object sender, EventArgs e)
@@ -51,7 +66,7 @@ namespace pryFuzziTest
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

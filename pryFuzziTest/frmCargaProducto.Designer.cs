@@ -80,10 +80,17 @@
             // 
             // cbxProdList
             // 
+            this.cbxProdList.Enabled = false;
             this.cbxProdList.FormattingEnabled = true;
-            this.cbxProdList.Location = new System.Drawing.Point(80, 56);
+            this.cbxProdList.Items.AddRange(new object[] {
+            "Lámparas",
+            "Herramientas",
+            "Materiales",
+            "Muebles",
+            "Otros.."});
+            this.cbxProdList.Location = new System.Drawing.Point(94, 56);
             this.cbxProdList.Name = "cbxProdList";
-            this.cbxProdList.Size = new System.Drawing.Size(187, 21);
+            this.cbxProdList.Size = new System.Drawing.Size(147, 21);
             this.cbxProdList.TabIndex = 10;
             this.cbxProdList.SelectedIndexChanged += new System.EventHandler(this.cbxProdList_SelectedIndexChanged);
             // 
@@ -92,9 +99,9 @@
             this.lblProdList.AutoSize = true;
             this.lblProdList.Location = new System.Drawing.Point(-1, 59);
             this.lblProdList.Name = "lblProdList";
-            this.lblProdList.Size = new System.Drawing.Size(75, 13);
+            this.lblProdList.Size = new System.Drawing.Size(94, 13);
             this.lblProdList.TabIndex = 9;
-            this.lblProdList.Text = "Lista Producto";
+            this.lblProdList.Text = "Lista de productos";
             this.lblProdList.Click += new System.EventHandler(this.lblProdList_Click);
             // 
             // btnRegister
@@ -110,7 +117,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 29);
+            this.lblName.Location = new System.Drawing.Point(49, 33);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(44, 13);
             this.lblName.TabIndex = 7;
@@ -119,9 +126,9 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(81, 26);
+            this.txtName.Location = new System.Drawing.Point(94, 26);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(136, 20);
+            this.txtName.Size = new System.Drawing.Size(118, 20);
             this.txtName.TabIndex = 6;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -137,6 +144,7 @@
             this.gbxLoadProd2.TabIndex = 7;
             this.gbxLoadProd2.TabStop = false;
             this.gbxLoadProd2.Text = "Opciones adicionales";
+            this.gbxLoadProd2.Visible = false;
             // 
             // lblProduct
             // 
