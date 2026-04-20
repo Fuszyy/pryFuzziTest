@@ -16,5 +16,42 @@ namespace pryFuzziTest
         {
             InitializeComponent();
         }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext1_Click(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void cbxProdList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProdList_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

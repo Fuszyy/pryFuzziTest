@@ -34,18 +34,19 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(108, 207);
+            this.btnStart.Location = new System.Drawing.Point(108, 133);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(103, 38);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Iniciar";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 270);
+            this.ClientSize = new System.Drawing.Size(316, 197);
             this.Controls.Add(this.btnStart);
             this.Name = "frmInicio";
             this.Text = "Inicio";

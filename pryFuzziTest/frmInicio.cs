@@ -16,5 +16,12 @@ namespace pryFuzziTest
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            frmCargaProducto ventanaProducto = new frmCargaProducto();
+
+            ventanaProducto.ShowDialog();
+        }
     }
 }
