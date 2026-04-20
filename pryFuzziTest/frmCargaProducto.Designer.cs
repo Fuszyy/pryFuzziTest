@@ -192,7 +192,7 @@
             this.gbxAdditional.Controls.Add(this.chkDelivery);
             this.gbxAdditional.Controls.Add(this.chkWarranty);
             this.gbxAdditional.Controls.Add(this.chkInstall);
-            this.gbxAdditional.Location = new System.Drawing.Point(24, 101);
+            this.gbxAdditional.Location = new System.Drawing.Point(24, 99);
             this.gbxAdditional.Name = "gbxAdditional";
             this.gbxAdditional.Size = new System.Drawing.Size(152, 72);
             this.gbxAdditional.TabIndex = 5;

@@ -63,6 +63,16 @@ namespace pryFuzziTest.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _40fpsenunacueva {
+            get {
+                object obj = ResourceManager.GetObject("40fpsenunacueva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _E168E9D2_D078_484A_BD02_73B6D2CF4FFD_ {
             get {
                 object obj = ResourceManager.GetObject("{E168E9D2-D078-484A-BD02-73B6D2CF4FFD}", resourceCulture);
