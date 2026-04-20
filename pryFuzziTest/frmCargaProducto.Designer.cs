@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaProducto));
             this.gbxLoadProd1 = new System.Windows.Forms.GroupBox();
             this.btnNext1 = new System.Windows.Forms.Button();
             this.cbxProdList = new System.Windows.Forms.ComboBox();
@@ -246,7 +247,9 @@
             this.Controls.Add(this.btnNext2);
             this.Controls.Add(this.gbxLoadProd2);
             this.Controls.Add(this.gbxLoadProd1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargaProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Producto";
             this.gbxLoadProd1.ResumeLayout(false);
             this.gbxLoadProd1.PerformLayout();

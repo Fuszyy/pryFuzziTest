@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.btnStart = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbxBackground = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBackground)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStart
@@ -44,14 +45,14 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // pictureBox1
+            // pbxBackground
             // 
-            this.pictureBox1.Image = global::pryFuzziTest.Properties.Resources._40fpsenunacueva;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 185);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pbxBackground.Image = global::pryFuzziTest.Properties.Resources._40fpsenunacueva;
+            this.pbxBackground.Location = new System.Drawing.Point(0, -3);
+            this.pbxBackground.Name = "pbxBackground";
+            this.pbxBackground.Size = new System.Drawing.Size(259, 185);
+            this.pbxBackground.TabIndex = 1;
+            this.pbxBackground.TabStop = false;
             // 
             // frmInicio
             // 
@@ -59,10 +60,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(257, 180);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxBackground);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBackground)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,7 +73,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxBackground;
     }
 }
 
