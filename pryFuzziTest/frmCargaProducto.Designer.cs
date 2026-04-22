@@ -46,7 +46,7 @@
             this.rbtRepuesto = new System.Windows.Forms.RadioButton();
             this.cbxProduct = new System.Windows.Forms.ComboBox();
             this.lblProduct = new System.Windows.Forms.Label();
-            this.btnNext2 = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
             this.gbxLoadProd1.SuspendLayout();
             this.gbxLoadProd2.SuspendLayout();
             this.gbxAdditional.SuspendLayout();
@@ -216,6 +216,7 @@
             this.rbtRepuesto.TabStop = true;
             this.rbtRepuesto.Text = "Repuesto";
             this.rbtRepuesto.UseVisualStyleBackColor = true;
+            this.rbtRepuesto.CheckedChanged += new System.EventHandler(this.rbtRepuesto_CheckedChanged);
             // 
             // cbxProduct
             // 
@@ -235,27 +236,29 @@
             this.lblProduct.TabIndex = 0;
             this.lblProduct.Text = "Producto";
             // 
-            // btnNext2
+            // btnDone
             // 
-            this.btnNext2.Location = new System.Drawing.Point(247, 312);
-            this.btnNext2.Name = "btnNext2";
-            this.btnNext2.Size = new System.Drawing.Size(75, 23);
-            this.btnNext2.TabIndex = 8;
-            this.btnNext2.Text = "Siguiente";
-            this.btnNext2.UseVisualStyleBackColor = true;
+            this.btnDone.Location = new System.Drawing.Point(247, 312);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(75, 23);
+            this.btnDone.TabIndex = 8;
+            this.btnDone.Text = "Realizado";
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnNext2_Click);
             // 
             // frmCargaProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 347);
-            this.Controls.Add(this.btnNext2);
+            this.Controls.Add(this.btnDone);
             this.Controls.Add(this.gbxLoadProd2);
             this.Controls.Add(this.gbxLoadProd1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargaProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cargar Producto";
+            this.Load += new System.EventHandler(this.frmCargaProducto_Load);
             this.gbxLoadProd1.ResumeLayout(false);
             this.gbxLoadProd1.PerformLayout();
             this.gbxLoadProd2.ResumeLayout(false);
@@ -287,6 +290,6 @@
         private System.Windows.Forms.CheckBox chkWarranty;
         private System.Windows.Forms.CheckBox chkInstall;
         private System.Windows.Forms.RadioButton rbtEquipo;
-        private System.Windows.Forms.Button btnNext2;
+        private System.Windows.Forms.Button btnDone;
     }
 }

@@ -53,6 +53,7 @@ namespace pryFuzziTest
                 cbxProdList.Enabled = true;
                 MessageBox.Show("Acceso Autorizado.", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cbxProdList.Items.Add((string)txtName.Text);
+                cbxProduct.Items.Add((string)txtName.Text);
                 txtName.Focus();
             }
             else
@@ -85,6 +86,56 @@ namespace pryFuzziTest
                     MessageBox.Show("Completar los datos", "Error al acceder", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnNext2_Click(object sender, EventArgs e)
+        {
+            if (cbxProduct.SelectedItem == null || (chkDelivery.Checked == false && chkInstall.Checked == false && chkWarranty.Checked == false) || (rbtRepuesto.Checked == false && rbtEquipo.Checked == false))
+            {
+                MessageBox.Show("Completar los datos", "Error al cargar producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string AdditionalDetails = "";
+                if (rbtRepuesto.Checked)
+                {
+                    AdditionalDetails = AdditionalDetails + "Repuesto \n";
+                }
+                if (rbtEquipo.Checked)
+                {
+                    AdditionalDetails = AdditionalDetails + "Equipo \n";
+                }
+                if (chkDelivery.Checked)
+                {
+                    AdditionalDetails = AdditionalDetails + "Envío \n";
+                }
+                if (chkInstall.Checked)
+                {
+                    AdditionalDetails = AdditionalDetails + "Instalación \n";
+                }
+                if (chkWarranty.Checked)
+                {
+                    AdditionalDetails = AdditionalDetails + "Garantía \n";
+                }
+                MessageBox.Show("Carga finalizada. \nAdicionales: \n" + AdditionalDetails , "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                gbxLoadProd2.Visible = false;
+                cbxProduct.SelectedItem = null;
+                cbxProdList.SelectedItem = null;
+                txtName.Text = string.Empty;
+            }
+            
+            
+           
+        }
+
+        private void rbtRepuesto_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCargaProducto_Load(object sender, EventArgs e)
+        {
+                
         }
     }
 }
