@@ -52,6 +52,8 @@ namespace pryFuzziTest
             {
                 cbxProdList.Enabled = true;
                 MessageBox.Show("Acceso Autorizado.", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbxProdList.Items.Add((string)txtName.Text);
+                txtName.Focus();
             }
             else
             {
@@ -67,6 +69,22 @@ namespace pryFuzziTest
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (txtName.Text != "")
+                {
+                    cbxProdList.Enabled = true;
+                    MessageBox.Show("Acceso Autorizado.", "Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Completar los datos", "Error al acceder", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

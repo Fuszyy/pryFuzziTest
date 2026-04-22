@@ -37,20 +37,20 @@
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.gbxLoadProd2 = new System.Windows.Forms.GroupBox();
-            this.lblProduct = new System.Windows.Forms.Label();
-            this.cbxProduct = new System.Windows.Forms.ComboBox();
-            this.rbtRepuesto = new System.Windows.Forms.RadioButton();
+            this.gbxAdditional = new System.Windows.Forms.GroupBox();
+            this.chkDelivery = new System.Windows.Forms.CheckBox();
+            this.chkWarranty = new System.Windows.Forms.CheckBox();
+            this.chkInstall = new System.Windows.Forms.CheckBox();
             this.gbxType = new System.Windows.Forms.GroupBox();
             this.rbtEquipo = new System.Windows.Forms.RadioButton();
-            this.gbxAdditional = new System.Windows.Forms.GroupBox();
-            this.chkInstall = new System.Windows.Forms.CheckBox();
-            this.chkWarranty = new System.Windows.Forms.CheckBox();
-            this.chkDelivery = new System.Windows.Forms.CheckBox();
+            this.rbtRepuesto = new System.Windows.Forms.RadioButton();
+            this.cbxProduct = new System.Windows.Forms.ComboBox();
+            this.lblProduct = new System.Windows.Forms.Label();
             this.btnNext2 = new System.Windows.Forms.Button();
             this.gbxLoadProd1.SuspendLayout();
             this.gbxLoadProd2.SuspendLayout();
-            this.gbxType.SuspendLayout();
             this.gbxAdditional.SuspendLayout();
+            this.gbxType.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLoadProd1
@@ -80,14 +80,9 @@
             // 
             // cbxProdList
             // 
+            this.cbxProdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProdList.Enabled = false;
             this.cbxProdList.FormattingEnabled = true;
-            this.cbxProdList.Items.AddRange(new object[] {
-            "Lámparas",
-            "Herramientas",
-            "Materiales",
-            "Muebles",
-            "Otros.."});
             this.cbxProdList.Location = new System.Drawing.Point(94, 56);
             this.cbxProdList.Name = "cbxProdList";
             this.cbxProdList.Size = new System.Drawing.Size(147, 21);
@@ -131,6 +126,7 @@
             this.txtName.Size = new System.Drawing.Size(118, 20);
             this.txtName.TabIndex = 6;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // gbxLoadProd2
             // 
@@ -146,33 +142,47 @@
             this.gbxLoadProd2.Text = "Opciones adicionales";
             this.gbxLoadProd2.Visible = false;
             // 
-            // lblProduct
+            // gbxAdditional
             // 
-            this.lblProduct.AutoSize = true;
-            this.lblProduct.Location = new System.Drawing.Point(21, 26);
-            this.lblProduct.Name = "lblProduct";
-            this.lblProduct.Size = new System.Drawing.Size(50, 13);
-            this.lblProduct.TabIndex = 0;
-            this.lblProduct.Text = "Producto";
+            this.gbxAdditional.Controls.Add(this.chkDelivery);
+            this.gbxAdditional.Controls.Add(this.chkWarranty);
+            this.gbxAdditional.Controls.Add(this.chkInstall);
+            this.gbxAdditional.Location = new System.Drawing.Point(24, 99);
+            this.gbxAdditional.Name = "gbxAdditional";
+            this.gbxAdditional.Size = new System.Drawing.Size(152, 72);
+            this.gbxAdditional.TabIndex = 5;
+            this.gbxAdditional.TabStop = false;
+            this.gbxAdditional.Text = "Adicional";
             // 
-            // cbxProduct
+            // chkDelivery
             // 
-            this.cbxProduct.FormattingEnabled = true;
-            this.cbxProduct.Location = new System.Drawing.Point(77, 23);
-            this.cbxProduct.Name = "cbxProduct";
-            this.cbxProduct.Size = new System.Drawing.Size(139, 21);
-            this.cbxProduct.TabIndex = 1;
+            this.chkDelivery.AutoSize = true;
+            this.chkDelivery.Location = new System.Drawing.Point(86, 19);
+            this.chkDelivery.Name = "chkDelivery";
+            this.chkDelivery.Size = new System.Drawing.Size(55, 17);
+            this.chkDelivery.TabIndex = 7;
+            this.chkDelivery.Text = "Envío";
+            this.chkDelivery.UseVisualStyleBackColor = true;
             // 
-            // rbtRepuesto
+            // chkWarranty
             // 
-            this.rbtRepuesto.AutoSize = true;
-            this.rbtRepuesto.Location = new System.Drawing.Point(9, 19);
-            this.rbtRepuesto.Name = "rbtRepuesto";
-            this.rbtRepuesto.Size = new System.Drawing.Size(71, 17);
-            this.rbtRepuesto.TabIndex = 3;
-            this.rbtRepuesto.TabStop = true;
-            this.rbtRepuesto.Text = "Repuesto";
-            this.rbtRepuesto.UseVisualStyleBackColor = true;
+            this.chkWarranty.AutoSize = true;
+            this.chkWarranty.Location = new System.Drawing.Point(9, 42);
+            this.chkWarranty.Name = "chkWarranty";
+            this.chkWarranty.Size = new System.Drawing.Size(68, 17);
+            this.chkWarranty.TabIndex = 7;
+            this.chkWarranty.Text = "Garantía";
+            this.chkWarranty.UseVisualStyleBackColor = true;
+            // 
+            // chkInstall
+            // 
+            this.chkInstall.AutoSize = true;
+            this.chkInstall.Location = new System.Drawing.Point(9, 19);
+            this.chkInstall.Name = "chkInstall";
+            this.chkInstall.Size = new System.Drawing.Size(77, 17);
+            this.chkInstall.TabIndex = 6;
+            this.chkInstall.Text = "Instalación";
+            this.chkInstall.UseVisualStyleBackColor = true;
             // 
             // gbxType
             // 
@@ -196,47 +206,34 @@
             this.rbtEquipo.Text = "Equipo";
             this.rbtEquipo.UseVisualStyleBackColor = true;
             // 
-            // gbxAdditional
+            // rbtRepuesto
             // 
-            this.gbxAdditional.Controls.Add(this.chkDelivery);
-            this.gbxAdditional.Controls.Add(this.chkWarranty);
-            this.gbxAdditional.Controls.Add(this.chkInstall);
-            this.gbxAdditional.Location = new System.Drawing.Point(24, 99);
-            this.gbxAdditional.Name = "gbxAdditional";
-            this.gbxAdditional.Size = new System.Drawing.Size(152, 72);
-            this.gbxAdditional.TabIndex = 5;
-            this.gbxAdditional.TabStop = false;
-            this.gbxAdditional.Text = "Adicional";
+            this.rbtRepuesto.AutoSize = true;
+            this.rbtRepuesto.Location = new System.Drawing.Point(9, 19);
+            this.rbtRepuesto.Name = "rbtRepuesto";
+            this.rbtRepuesto.Size = new System.Drawing.Size(71, 17);
+            this.rbtRepuesto.TabIndex = 3;
+            this.rbtRepuesto.TabStop = true;
+            this.rbtRepuesto.Text = "Repuesto";
+            this.rbtRepuesto.UseVisualStyleBackColor = true;
             // 
-            // chkInstall
+            // cbxProduct
             // 
-            this.chkInstall.AutoSize = true;
-            this.chkInstall.Location = new System.Drawing.Point(9, 19);
-            this.chkInstall.Name = "chkInstall";
-            this.chkInstall.Size = new System.Drawing.Size(77, 17);
-            this.chkInstall.TabIndex = 6;
-            this.chkInstall.Text = "Instalación";
-            this.chkInstall.UseVisualStyleBackColor = true;
+            this.cbxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxProduct.FormattingEnabled = true;
+            this.cbxProduct.Location = new System.Drawing.Point(77, 23);
+            this.cbxProduct.Name = "cbxProduct";
+            this.cbxProduct.Size = new System.Drawing.Size(139, 21);
+            this.cbxProduct.TabIndex = 1;
             // 
-            // chkWarranty
+            // lblProduct
             // 
-            this.chkWarranty.AutoSize = true;
-            this.chkWarranty.Location = new System.Drawing.Point(9, 42);
-            this.chkWarranty.Name = "chkWarranty";
-            this.chkWarranty.Size = new System.Drawing.Size(68, 17);
-            this.chkWarranty.TabIndex = 7;
-            this.chkWarranty.Text = "Garantía";
-            this.chkWarranty.UseVisualStyleBackColor = true;
-            // 
-            // chkDelivery
-            // 
-            this.chkDelivery.AutoSize = true;
-            this.chkDelivery.Location = new System.Drawing.Point(86, 19);
-            this.chkDelivery.Name = "chkDelivery";
-            this.chkDelivery.Size = new System.Drawing.Size(55, 17);
-            this.chkDelivery.TabIndex = 7;
-            this.chkDelivery.Text = "Envío";
-            this.chkDelivery.UseVisualStyleBackColor = true;
+            this.lblProduct.AutoSize = true;
+            this.lblProduct.Location = new System.Drawing.Point(21, 26);
+            this.lblProduct.Name = "lblProduct";
+            this.lblProduct.Size = new System.Drawing.Size(50, 13);
+            this.lblProduct.TabIndex = 0;
+            this.lblProduct.Text = "Producto";
             // 
             // btnNext2
             // 
@@ -263,10 +260,10 @@
             this.gbxLoadProd1.PerformLayout();
             this.gbxLoadProd2.ResumeLayout(false);
             this.gbxLoadProd2.PerformLayout();
-            this.gbxType.ResumeLayout(false);
-            this.gbxType.PerformLayout();
             this.gbxAdditional.ResumeLayout(false);
             this.gbxAdditional.PerformLayout();
+            this.gbxType.ResumeLayout(false);
+            this.gbxType.PerformLayout();
             this.ResumeLayout(false);
 
         }
