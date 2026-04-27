@@ -63,16 +63,16 @@
             this.gbxLoadProd1.Controls.Add(this.txtName);
             this.gbxLoadProd1.Location = new System.Drawing.Point(12, 12);
             this.gbxLoadProd1.Name = "gbxLoadProd1";
-            this.gbxLoadProd1.Size = new System.Drawing.Size(310, 111);
+            this.gbxLoadProd1.Size = new System.Drawing.Size(310, 81);
             this.gbxLoadProd1.TabIndex = 6;
             this.gbxLoadProd1.TabStop = false;
             this.gbxLoadProd1.Text = "Opciones generales";
             // 
             // btnNext1
             // 
-            this.btnNext1.Location = new System.Drawing.Point(228, 83);
+            this.btnNext1.Location = new System.Drawing.Point(221, 54);
             this.btnNext1.Name = "btnNext1";
-            this.btnNext1.Size = new System.Drawing.Size(75, 23);
+            this.btnNext1.Size = new System.Drawing.Size(83, 23);
             this.btnNext1.TabIndex = 11;
             this.btnNext1.Text = "Siguiente";
             this.btnNext1.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.cbxProdList.FormattingEnabled = true;
             this.cbxProdList.Location = new System.Drawing.Point(94, 56);
             this.cbxProdList.Name = "cbxProdList";
-            this.cbxProdList.Size = new System.Drawing.Size(147, 21);
+            this.cbxProdList.Size = new System.Drawing.Size(118, 21);
             this.cbxProdList.TabIndex = 10;
             this.cbxProdList.SelectedIndexChanged += new System.EventHandler(this.cbxProdList_SelectedIndexChanged);
             // 
@@ -134,9 +134,9 @@
             this.gbxLoadProd2.Controls.Add(this.gbxType);
             this.gbxLoadProd2.Controls.Add(this.cbxProduct);
             this.gbxLoadProd2.Controls.Add(this.lblProduct);
-            this.gbxLoadProd2.Location = new System.Drawing.Point(12, 123);
+            this.gbxLoadProd2.Location = new System.Drawing.Point(14, 102);
             this.gbxLoadProd2.Name = "gbxLoadProd2";
-            this.gbxLoadProd2.Size = new System.Drawing.Size(310, 183);
+            this.gbxLoadProd2.Size = new System.Drawing.Size(308, 127);
             this.gbxLoadProd2.TabIndex = 7;
             this.gbxLoadProd2.TabStop = false;
             this.gbxLoadProd2.Text = "Opciones adicionales";
@@ -147,9 +147,9 @@
             this.gbxAdditional.Controls.Add(this.chkDelivery);
             this.gbxAdditional.Controls.Add(this.chkWarranty);
             this.gbxAdditional.Controls.Add(this.chkInstall);
-            this.gbxAdditional.Location = new System.Drawing.Point(24, 99);
+            this.gbxAdditional.Location = new System.Drawing.Point(137, 50);
             this.gbxAdditional.Name = "gbxAdditional";
-            this.gbxAdditional.Size = new System.Drawing.Size(152, 72);
+            this.gbxAdditional.Size = new System.Drawing.Size(147, 70);
             this.gbxAdditional.TabIndex = 5;
             this.gbxAdditional.TabStop = false;
             this.gbxAdditional.Text = "Adicional";
@@ -157,7 +157,7 @@
             // chkDelivery
             // 
             this.chkDelivery.AutoSize = true;
-            this.chkDelivery.Location = new System.Drawing.Point(86, 19);
+            this.chkDelivery.Location = new System.Drawing.Point(89, 19);
             this.chkDelivery.Name = "chkDelivery";
             this.chkDelivery.Size = new System.Drawing.Size(55, 17);
             this.chkDelivery.TabIndex = 7;
@@ -167,7 +167,7 @@
             // chkWarranty
             // 
             this.chkWarranty.AutoSize = true;
-            this.chkWarranty.Location = new System.Drawing.Point(9, 42);
+            this.chkWarranty.Location = new System.Drawing.Point(6, 42);
             this.chkWarranty.Name = "chkWarranty";
             this.chkWarranty.Size = new System.Drawing.Size(68, 17);
             this.chkWarranty.TabIndex = 7;
@@ -177,7 +177,7 @@
             // chkInstall
             // 
             this.chkInstall.AutoSize = true;
-            this.chkInstall.Location = new System.Drawing.Point(9, 19);
+            this.chkInstall.Location = new System.Drawing.Point(6, 19);
             this.chkInstall.Name = "chkInstall";
             this.chkInstall.Size = new System.Drawing.Size(77, 17);
             this.chkInstall.TabIndex = 6;
@@ -190,7 +190,7 @@
             this.gbxType.Controls.Add(this.rbtRepuesto);
             this.gbxType.Location = new System.Drawing.Point(24, 50);
             this.gbxType.Name = "gbxType";
-            this.gbxType.Size = new System.Drawing.Size(152, 43);
+            this.gbxType.Size = new System.Drawing.Size(81, 70);
             this.gbxType.TabIndex = 4;
             this.gbxType.TabStop = false;
             this.gbxType.Text = "Tipo";
@@ -198,7 +198,7 @@
             // rbtEquipo
             // 
             this.rbtEquipo.AutoSize = true;
-            this.rbtEquipo.Location = new System.Drawing.Point(86, 19);
+            this.rbtEquipo.Location = new System.Drawing.Point(9, 42);
             this.rbtEquipo.Name = "rbtEquipo";
             this.rbtEquipo.Size = new System.Drawing.Size(58, 17);
             this.rbtEquipo.TabIndex = 5;
@@ -238,7 +238,7 @@
             // 
             // btnDone
             // 
-            this.btnDone.Location = new System.Drawing.Point(247, 312);
+            this.btnDone.Location = new System.Drawing.Point(247, 236);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
             this.btnDone.TabIndex = 8;
@@ -250,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 347);
+            this.ClientSize = new System.Drawing.Size(334, 269);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.gbxLoadProd2);
             this.Controls.Add(this.gbxLoadProd1);
